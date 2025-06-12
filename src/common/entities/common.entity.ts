@@ -14,14 +14,14 @@ export abstract class CommonEntity extends BaseEntity {
   id: number;
 
   @Exclude()
-  @CreateDateColumn({ type: 'timestamptz' })
+  @CreateDateColumn({ type: 'timestamp' })
   createdAt: Date;
 
   @Exclude()
-  @UpdateDateColumn({ type: 'timestamptz' })
+  @UpdateDateColumn({ type: 'timestamp' })
   updatedAt: Date;
 
   @Exclude()
-  @DeleteDateColumn({ type: 'timestamptz', nullable: true })
+  @DeleteDateColumn({ type: 'timestamp', nullable: true })
   deletedAt?: Date | null;
 }
